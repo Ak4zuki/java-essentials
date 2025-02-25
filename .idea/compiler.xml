@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="discount-system" />
-        <module name="random-quote-generator" />
+        <module name="learning" />
       </profile>
     </annotationProcessing>
   </component>
