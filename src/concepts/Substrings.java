@@ -1,3 +1,5 @@
+package concepts;
+
 import java.util.Scanner;
 
 public class Substrings {
