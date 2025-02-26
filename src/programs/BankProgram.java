@@ -27,21 +27,68 @@ public class BankProgram {
 
             switch (choice) {
                 case 1:
-                    System.out.println("SHOW BALANCE");
+                    showBalance(balance);
                     break;
                 case 2:
-                    System.out.println("DEPOSIT");
+                    balance += deposit();
                     break;
                 case 3:
-                    System.out.println("WITHDRAW");
+                    balance -= balance - withdraw(balance);
                     break;
                 case 4:
                     isRunning = false;
                     break;
                 default:
+                    System.out.println("*****************");
                     System.out.println("INVALID CHOICE");
                     break;
             }
+        }
+
+        System.out.println("*****************");
+        System.out.println("Thank You! Have a great day.");
+        System.out.println("*****************");
+
+        scanner.close();
+    }
+
+    static void showBalance(double balance){
+
+        System.out.println("*****************");
+        System.out.printf("R%.2f\n", balance);
+
+    }
+    static double deposit(){
+
+        double amount;
+
+        System.out.println("*****************");
+        System.out.print("Enter The Amount: ");
+        amount = scanner.nextDouble();
+
+        if(amount < 0){
+            System.out.println("INVALID AMOUNT");
+            return 0;
+        }else{
+            return amount;
+        }
+    }
+    static double withdraw(double balance){
+
+        double amount;
+
+        System.out.println("*****************");
+        System.out.print("Enter Amount to Withdraw: ");
+        amount = scanner.nextDouble();
+
+        if(amount > balance){
+            System.out.println("INSUFFICIENT FUNDS");
+            return 0;
+        } else if (amount < 0) {
+            System.out.println("INVALID AMOUNT");
+            return 0;
+        }else{
+            return amount;
         }
     }
 }
