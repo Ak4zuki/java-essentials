@@ -17,27 +17,36 @@ public class RPS {
         String computerChoice;
         String playAgain = "yes";
 
-        System.out.print("Choose wise tarnished.\nRock, Paper or Scissors?: ");
-        playerChoice = scanner.nextLine().toLowerCase();
+        do {
+            System.out.print("Choose wisely tarnished.\nRock, Paper or Scissors?: ");
+            playerChoice = scanner.nextLine().toLowerCase();
 
-        if (!playerChoice.equals("rock") &&
-                !playerChoice.equals("paper") &&
-                !playerChoice.equals("scissors")) {
-            System.out.println("No Strength Builds Allowed, Tarnished");
-        }else {
-            computerChoice = choices[random.nextInt(3)];
-            System.out.println("Yes.");
-            Thread.sleep(1000);
-            System.out.println("But will it defeat " + computerChoice + "?\n");
+            if (!playerChoice.equals("rock") &&
+                    !playerChoice.equals("paper") &&
+                    !playerChoice.equals("scissors")) {
+                System.out.println("No Strength Builds Allowed, Tarnished");
+                continue;
+            }else {
+                computerChoice = choices[random.nextInt(3)];
+                System.out.println("Yes.");
+                Thread.sleep(1000);
+                System.out.println("But will it defeat " + computerChoice + "?\n");
 
-            if (playerChoice.equals(computerChoice)) {
-                System.out.println("A draw. The fates remain in balance.");
-            } else if (determineWinner(playerChoice, computerChoice)) {
-                System.out.println("You were a worthy foe.");
-            } else {
-                System.out.println("Jgl Diff. FF15");
+                if (playerChoice.equals(computerChoice)) {
+                    System.out.println("A draw. The fates remain in balance.");
+                } else if (determineWinner(playerChoice, computerChoice)) {
+                    System.out.println("You were a worthy foe.");
+                } else {
+                    System.out.println("Jgl Diff. FF15");
+                }
             }
-        }
+
+            System.out.println("Play again?: ");
+            playAgain = scanner.nextLine().toLowerCase();
+        }while (playAgain.equals("yes"));
+
+        System.out.println("Thanks for playing!");
+
         scanner.close();
     }
 
