@@ -1,6 +1,6 @@
 package concepts.oop;
 
-import service.Car;
+import concepts.oop.examples.Car;
 
 public class CarMain {
     public static void main(String[] args) {
