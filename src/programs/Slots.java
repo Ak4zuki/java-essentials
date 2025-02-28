@@ -1,16 +1,16 @@
 package programs;
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class Slots {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
 
         Scanner scanner = new Scanner(System.in);
 
         int balance = 100;
         int bet;
         int payout;
+        String playAgain;
         String[] row;
 
         System.out.println("Greetings From Java Slots!");
@@ -21,6 +21,7 @@ public class Slots {
             System.out.println("Current Balance: R" + balance);
             System.out.print("Enter Bet Amount: ");
             bet = scanner.nextInt();
+            scanner.nextLine();
 
             if (bet > balance) {
                 System.out.println("INSUFFICIENT FUNDS");
@@ -44,19 +45,20 @@ public class Slots {
                 System.out.println("Spin Again");
             }
 
+            System.out.print("Check Out (Y/N)?: ");
+            playAgain = scanner.nextLine().toLowerCase();
+
+            if (playAgain.equals("y")) {
+                break;
+            }
         }
 
-
-        //Spin Row
-        //Print Row
-        //Get Payout
-
-        //Play Again if Yes
-        // else Exit
+        System.out.println("Your Final Balance Is R" + balance);
+        Thread.sleep(1000);
+        System.out.println("GOODBYE");
 
         scanner.close();
     }
-
     static String[] spinRow() {
 
         String[] symbols = {"🍋", "⭐", "🍒", "⛳", "🍉"};
@@ -99,8 +101,7 @@ public class Slots {
                     payout = 0;
             }
             return payout;
-        }
-        else if (row[0].equals(row[1])) {
+        } else if (row[0].equals(row[1])) {
             int payout;
             switch (row[0]) {
                 case "🍋":
