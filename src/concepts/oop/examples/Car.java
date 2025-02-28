@@ -1,4 +1,4 @@
-package service;
+package concepts.oop.examples;
 
 public class Car {
 
