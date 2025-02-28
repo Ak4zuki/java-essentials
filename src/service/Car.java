@@ -2,25 +2,28 @@ package service;
 
 public class Car {
 
-    String make = "Toyota";
-    String model = "Mk4 Supra";
-    int year = 2002;
-    double price = 1000000;
-    boolean isRunning;
+    public String make = "Toyota";
+    public String model = "Mk4 Supra";
+    public int year = 2002;
+    public double price = 1000000;
+    public boolean isRunning;
 
-    void start(){
+    public void start() {
         isRunning = true;
         System.out.println("You started the car");
     }
-    void stop(){
+
+    public void stop() {
         isRunning = false;
         System.out.println("You switched off the car ");
     }
-    void drive(){
+
+    public void drive() {
         isRunning = true;
         System.out.println("The car is driving");
     }
-    void brake(){
+
+    public void brake() {
         isRunning = false;
         System.out.println("You stopped the car");
     }
