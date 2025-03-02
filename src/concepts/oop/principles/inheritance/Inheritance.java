@@ -9,7 +9,7 @@ public class Inheritance {
         User user = new User("Wj", "wjbos@gmail.com");
         PremiumUser premiumUser = new PremiumUser("Stefan", "svdev@gmail.com", "creditCard");
 
-        user.getMessage();
-        premiumUser.getMessage();
+        System.out.println(user.getMessage());
+        System.out.println(premiumUser.getMessage());
     }
 }
