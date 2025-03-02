@@ -1,6 +1,6 @@
-package concepts.oop.getstters;
+package concepts.oop.principles.getsetters;
 
-import concepts.oop.examples.Product;
+import concepts.oop.principles.getsetters.product.Product;
 
 public class GettersSetters {
     public static void main(String[] args) {

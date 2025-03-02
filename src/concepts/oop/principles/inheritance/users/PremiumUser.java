@@ -1,4 +1,4 @@
-package concepts.oop.inheritance.users;
+package concepts.oop.principles.inheritance.users;
 
 public class PremiumUser extends User {
     private String creditCard;

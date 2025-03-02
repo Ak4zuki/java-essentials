@@ -1,7 +1,7 @@
-package concepts.oop.inheritance;
+package concepts.oop.principles.inheritance;
 
-import concepts.oop.inheritance.users.PremiumUser;
-import concepts.oop.inheritance.users.User;
+import concepts.oop.principles.inheritance.users.PremiumUser;
+import concepts.oop.principles.inheritance.users.User;
 
 public class Inheritance {
     public static void main(String[] args) {

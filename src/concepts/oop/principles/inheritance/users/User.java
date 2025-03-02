@@ -1,4 +1,4 @@
-package concepts.oop.inheritance.users;
+package concepts.oop.principles.inheritance.users;
 
 public class User {
     private String userName;

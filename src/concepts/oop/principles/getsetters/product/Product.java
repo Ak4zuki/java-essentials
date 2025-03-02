@@ -1,4 +1,4 @@
-package concepts.oop.examples;
+package concepts.oop.principles.getsetters.product;
 
 public class Product {
     private String name;
